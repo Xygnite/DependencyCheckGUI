@@ -1,0 +1,172 @@
+/* stylesheet_light.qss */
+
+QWidget {
+    background-color: #F0F0F0;
+    color: #000000;
+    font-family: "Segoe UI", "Cantarell", "sans-serif";
+    font-size: 10pt;
+}
+
+QMenuBar {
+    background-color: #E8E8E8;
+    color: #000000;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 4px 10px;
+}
+
+QMenuBar::item:selected {
+    background-color: #007ACC;
+    color: #FFFFFF;
+}
+
+QMenu {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #DCDCDC;
+}
+
+QMenu::item:selected {
+    background-color: #007ACC;
+    color: #FFFFFF;
+}
+
+QLabel {
+    color: #000000;
+    padding: 2px;
+}
+
+QLineEdit {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #007ACC;
+}
+
+QPushButton {
+    background-color: #007ACC;
+    color: #FFFFFF;
+    border: 1px solid #007ACC;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 16px;
+}
+
+QPushButton:hover {
+    background-color: #005f9e;
+    border: 1px solid #005f9e;
+}
+
+QPushButton:pressed {
+    background-color: #004c7d;
+}
+
+QPushButton:disabled {
+    background-color: #D3D3D3;
+    color: #808080;
+    border: 1px solid #C0C0C0;
+}
+
+QComboBox {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    selection-background-color: #007ACC;
+    selection-color: #FFFFFF;
+}
+
+QTextEdit {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+QRadioButton {
+    spacing: 5px;
+}
+
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}
+
+/* Styles for Preferences Dialog */
+#helpBox {
+    background-color: #E8E8E8;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 10px;
+    color: #000000;
+}
+
+#titleLabel {
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+#descriptionLabel {
+    color: #555555;
+    padding-bottom: 10px;
+}
+
+QListWidget {
+    background-color: #F0F0F0;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+}
+
+/* Styles for Table */
+QTableWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    gridline-color: #DCDCDC;
+}
+
+QHeaderView::section {
+    background-color: #E8E8E8;
+    color: #000000;
+    padding: 4px;
+    border: 1px solid #DCDCDC;
+    font-weight: bold;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #007ACC;
+    color: #FFFFFF;
+}
+
+/* Styles for Jar Vulnerability Finder */
+#vulnerabilityLabel {
+    font-weight: bold;
+    font-size: 12pt;
+    padding-top: 5px;
+}
+
+QScrollArea {
+    border: none;
+}
