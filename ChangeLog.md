@@ -1,5 +1,32 @@
 # Change Log
 
+## [Version 1.3](https://github.com/VoidmetriX/DependencyCheckGUI/releases/tag/v1.3) - 2026-02-11
+
+### Added
+- **Theme Support**: Introduced a new **Theme Manager** allowing users to switch between **Dark**, **Light**, and **System** themes.
+- **Sonatype OSS Index Integration**:
+  - Added **Sonatype API Key** configuration in Preferences.
+  - **Jar Vulnerability Finder** now uses authenticated requests to Sonatype OSS Index for more reliable vulnerability scanning.
+- **CVE History Viewer**:
+  - Enhanced the **CVE Details** tool to include a "History" view.
+  - Users can now see the full changelog of a CVE (events, source, creation date, and specific field changes).
+- **Configuration Management**:
+  - Introduced `configuration.xml` to persist user preferences (themes, API keys) across sessions.
+  - Added dedicated configuration managers (`nvd_config_mgr.py`, `sonatype_config_mgr.py`).
+
+### Changed
+- **Code Refactoring**:
+  - **Major Restructuring**: Replaced the legacy `DependencyCheckGUI.pyw` with a modular architecture starting from `main.py`.
+  - Extracted core logic into specialized modules (`dependency_check_manager.py`, `theme_manager.py`, `nvd_config_mgr.py`, `sonatype_config_mgr.py`) to improve maintainability compared to the previous flat structure.
+- **Jar Vulnerability Finder**:
+  - Now requires a Sonatype API key for scanning to avoid rate limits and ensure data access.
+  - Improved result display with severity color coding and clickable reference links.
+
+### Fixed
+- **NVD API Key Handling**: Improved the reliability of NVD API key loading and saving mechanisms.
+- **UI Responsiveness**: Optimized thread handling for scans to prevent UI freezing during long operations.
+
+
 ## [Version 1.2](https://github.com/hadesninja/DependencyCheckGUI/releases/tag/v1.2) - 2025-08-16
 
 ### Added
@@ -74,4 +101,3 @@
 
 ### Changed
 - **Report and Log Storage**: Updated the `run_command` function to store generated reports in the `reports` folder and logs in the `logs` folder.
-
