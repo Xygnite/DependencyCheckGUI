@@ -1,7 +1,7 @@
 /* stylesheet_light.qss */
 
 QWidget {
-    background-color: #F0F0F0;
+    background-color: #FFFFFF;
     color: #000000;
     font-family: "Segoe UI", "Cantarell", "sans-serif";
     font-size: 10pt;
@@ -49,6 +49,15 @@ QLineEdit {
 
 QLineEdit:focus {
     border: 1px solid #007ACC;
+}
+
+QLineEdit[hasError="true"] {
+    border: 1px solid #C0392B;
+    background-color: #FFF4F4;
+}
+
+QLineEdit[hasError="true"]:focus {
+    border: 1px solid #A93226;
 }
 
 QPushButton {
@@ -111,6 +120,97 @@ QRadioButton::indicator {
     height: 14px;
 }
 
+QGroupBox {
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    margin-top: 18px;
+    padding: 16px;
+    background-color: #FFFFFF;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 8px;
+    font-weight: bold;
+    color: #007ACC;
+}
+
+QStatusBar {
+    background-color: #FFFFFF;
+    border-top: 1px solid #DCDCDC;
+}
+
+QProgressBar {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+    border-radius: 6px;
+    text-align: center;
+}
+
+QProgressBar::chunk {
+    background-color: #007ACC;
+    border-radius: 6px;
+}
+
+QTabWidget::pane {
+    border: 1px solid #D0D0D0;
+    border-radius: 6px;
+    padding: 4px;
+    background-color: #FFFFFF;
+}
+
+QTabBar::tab {
+    background-color: #F5F5F5;
+    color: #333333;
+    border: 1px solid #D0D0D0;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 6px 14px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #007ACC;
+    color: #FFFFFF;
+    border-color: #007ACC;
+}
+
+QTabBar::tab:hover {
+    background-color: #E0E0E0;
+}
+
+#headerFrame {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    border-radius: 12px;
+}
+
+#appTitle {
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+#taglineLabel {
+    color: #666666;
+    padding: 0;
+    margin-top: 0;
+}
+
+#quickActionFrame {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+}
+
+#executionHint {
+    color: #555555;
+    padding-right: 8px;
+}
+
 /* Styles for Preferences Dialog */
 #helpBox {
     background-color: #E8E8E8;
@@ -131,7 +231,7 @@ QRadioButton::indicator {
 }
 
 QListWidget {
-    background-color: #F0F0F0;
+    background-color: #FFFFFF;
     border: 1px solid #DCDCDC;
     border-radius: 4px;
 }

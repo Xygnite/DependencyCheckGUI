@@ -47,6 +47,15 @@ QLineEdit:focus {
     border: 1px solid #007ACC;
 }
 
+QLineEdit[hasError="true"] {
+    border: 1px solid #E57373;
+    background-color: #402323;
+}
+
+QLineEdit[hasError="true"]:focus {
+    border: 1px solid #EF5350;
+}
+
 QPushButton {
     background-color: #007ACC;
     color: #FFFFFF;
@@ -106,6 +115,97 @@ QRadioButton::indicator {
     height: 14px;
 }
 
+QGroupBox {
+    border: 1px solid #3F3F3F;
+    border-radius: 8px;
+    margin-top: 18px;
+    padding: 16px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 8px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+QStatusBar {
+    background-color: #2B2B2B;
+    border-top: 1px solid #3F3F3F;
+}
+
+QProgressBar {
+    background-color: #1F1F1F;
+    color: #F0F0F0;
+    border: 1px solid #3F3F3F;
+    border-radius: 6px;
+    text-align: center;
+}
+
+QProgressBar::chunk {
+    background-color: #0091EA;
+    border-radius: 6px;
+}
+
+QTabWidget::pane {
+    border: 1px solid #3F3F3F;
+    border-radius: 6px;
+    padding: 4px;
+    background-color: #2B2B2B;
+}
+
+QTabBar::tab {
+    background-color: #2F2F2F;
+    color: #F0F0F0;
+    border: 1px solid #3F3F3F;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 6px 14px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #007ACC;
+    color: #FFFFFF;
+    border-color: #007ACC;
+}
+
+QTabBar::tab:hover {
+    background-color: #3C3C3C;
+}
+
+#headerFrame {
+    background-color: #333333;
+    border: 1px solid #3F3F3F;
+    border-radius: 12px;
+}
+
+#appTitle {
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+#taglineLabel {
+    color: #B3B3B3;
+    padding: 0;
+    margin-top: 0;
+}
+
+#quickActionFrame {
+    background-color: #323232;
+    border: 1px solid #3F3F3F;
+    border-radius: 8px;
+}
+
+#executionHint {
+    color: #BBBBBB;
+    padding-right: 8px;
+}
+
 /* Styles for Preferences Dialog */
 #helpBox {
     background-color: #3C3C3C;
@@ -136,6 +236,7 @@ QTableWidget {
     background-color: #2B2B2B;
     border: 1px solid #555555;
     gridline-color: #555555;
+    alternate-background-color: #2B2B2B;
 }
 
 QHeaderView::section {
