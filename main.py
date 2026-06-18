@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel,
     QLineEdit, QPushButton, QComboBox, QTextEdit, QAction, QFileDialog,
     QMessageBox, QRadioButton, QButtonGroup, QGroupBox, QFormLayout, QFrame,
-    QProgressBar, QTabWidget
+    QProgressBar, QTabWidget, QCheckBox
 )
 from fetch_cve_details import CVEDetailsRetriever
 from jar_vulnerability_finder import JarVulnerabilityScanner
@@ -213,6 +213,18 @@ class DependencyCheckGUI(QMainWindow):
         self.format_combo.addItems(["HTML", "CSV", "XML"])
         form.addRow("Report Format:", self.format_combo)
 
+        # Skip Update
+        mode_widget = QWidget()
+        mode_layout = QHBoxLayout(mode_widget)
+        mode_layout.setContentsMargins(0, 0, 0, 0)
+        mode_layout.setSpacing(16)
+
+        self.checkSkipUpdate = QCheckBox(" ")
+
+        mode_layout.addWidget(self.checkSkipUpdate)
+        mode_layout.addStretch()
+        form.addRow("Skip Update (NOT RECOMMENDED):", mode_widget)
+
         group.setLayout(form)
         return group
 
@@ -338,6 +350,9 @@ class DependencyCheckGUI(QMainWindow):
         api_key = load_nvd_api_key(self)
         if api_key:
             cmd += ["--nvdApiKey", api_key]
+
+        if self.checkSkipUpdate.isChecked():
+            cmd += ["--noupdate"]
 
         command = " ".join(f'"{c}"' if " " in c else c for c in cmd)
         self.output.append(f"Running:\n{command}\n")
